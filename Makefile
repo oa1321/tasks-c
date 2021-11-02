@@ -9,6 +9,8 @@ all: libclassrec.a libclassloops.a libclassrec.so libclassloops.so maindrec main
 
 mains: $(OBJECTS_MAIN) libclassrec.a
 	$(CC) $(flags)  -o mains $(OBJECTS_MAIN) libclassrec.a
+mainsloop: $(OBJECTS_MAIN) libclassrec.a
+	$(CC) $(flags)  -o mainsloop $(OBJECTS_MAIN) libclassloops.a
 
 maindloop: $(OBJECTS_MAIN) 
 	$(CC) $(flags)  -o maindloop $(OBJECTS_MAIN) ./libclassloops.so
