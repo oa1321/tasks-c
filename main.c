@@ -6,6 +6,7 @@ int main(){
    int a=0;
    int b=0;
    scanf("%d%d", &a, &b);
+   printf("The Armstrong numbers are:");
    for(int i = a; i < b; i+=1){
    		if(isArmstrong(i)){
    			printf("%d ",i);
@@ -15,6 +16,7 @@ int main(){
    			printf("%d",b);
    		}
    printf("\n");
+   printf("The Palindromes are:");
    for(int i = a; i < b; i+=1){
    		if(isPalindrome(i)){
    			printf("%d ",i);
@@ -24,6 +26,7 @@ int main(){
    			printf("%d",b);
    		}
    printf("\n");
+   printf("The Prime numbers are:");
    for(int i = a; i < b; i+=1){
    		if(isPrime(i)){
    			printf("%d ",i);
@@ -33,6 +36,7 @@ int main(){
    			printf("%d",b);
    		}
    printf("\n");
+   printf("The Strong numbers are:");
    for(int i = a; i < b; i+=1){
    		if(isStrong(i)){
    			printf("%d ",i);
