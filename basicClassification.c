@@ -31,8 +31,11 @@ int isStrong(int x){
 //check if x is a prime number
 int isPrime(int x){
 	int isprime = true;
-	if(x < 2){
+	if(x < 1){
 		return false;
+	}
+	if(x == 1){
+		return true;
 	}
 	for(int i = 2; i < x; i+=1){
 		if(x%i == 0){
