@@ -47,16 +47,25 @@ int isArmstrong(int x){
 	return isrec(x,digAmount(x));
 }
 
-int isPalindrome(int x){
+int getDig(int x, int i){	
+	int d = x/Pow(10,i);
+	return d%10;
+}
+
+int isrecP(int x,int times){
 	int digits = digAmount(x);
-	if(digits<=1){
+	int i = times;
+	if(times>=digits/2){
 		return true;
 	}
-	if(x/Pow(10,digits-1) != x%10){
+	if(getDig(x,i) != getDig(x,digits-1-i)){
 		return false;
 	}
-	int new = x%Pow(10,digits-1);
-	return isPalindrome(new/10);
+	return isrecP(x,times+1);
+}
+
+int isPalindrome(int x){
+	return isrecP(x,0);
 }
 
 /*
